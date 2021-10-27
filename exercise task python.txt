@@ -1,0 +1,96 @@
+1. Create a program to compare three numbers and find the bigger numbers. [topics covered: identified, variable, types, operator, if statement]
+ * num1 = int(input("enter number 1: "))
+  num2 = int(input("enter number 2: "))
+  num3 = int(input("enter number 3: "))
+
+  if (num1 >= num2) and (num1 >= num3):
+    print("num1 is largest")
+  elif (num2 >= num1) and (num2 >= num3):
+    print("num2 is largest")
+  else:
+    print("num3 is largest")
+2.Write the above solution in a functionwhichtakes take numbers and return the bigger number [topic covered: function]
+*num1=int(input("Enter the first number: "));
+num2=int(input("Enter the second number: "));
+num3=int(input("Enter the Third number: "));
+
+def find_Biggest():
+     if(num1>=num2) and (num1>=num2):
+         largest=num1
+     elif(num2>=num1) and (num2>=num3):
+         largest=num2
+     else:
+         largest=num3
+
+     print("Largest number is",largest)
+
+find_Biggest();
+#function call
+3.Create a program that asks the user to enter their name and their age. Print out a message addressed to them that tells them the year that they will turn 100 years old.
+*name = input("What is your name: ")
+age = int(input("How old are you: "))
+year = str((2021 - age)+100)
+print(name + " will be 100 years old in the year " + year)
+* using function:
+name = str(input("What is your name: "))
+age = int(input("How old are you: "))
+def age(n,a):
+     hundredth_yr = str((2021 - age)+100)
+     return hundredth_yr
+print(name , " become 100 years old in" ,age,(name,age))
+6.Make a two-player Rock-Paper-Scissors game. (Hint: Ask for player plays (using input), compare them, print out a message of congratulations to the winner, and ask if the players want to start a new game)Remember the rules:Rock beats scissorsScissors beats paperPaper beats rock
+*while True:
+    choice = input("Do wanna play a game of Rock-paper-scissor? Y/N\n")
+    if choice == 'Y':
+        player1=input("Player 1, Enter Your Choice:")
+        player2 = input("Player 2, Enter Your Choice:")
+        if player1 == player2:
+            print("Its a tie!!!")
+
+        elif player1 == 'rock':
+            if player2 == 'scissors':
+                print("Player 1 wins\n Congrations!!!")
+            else:
+                print("Player 2 wins\n Congrations!!!")
+        elif player1 == 'scissors':
+            if player2 == 'paper':
+                print("Player1 wins\n Congrations!!!")
+            else:
+                print("Player 2 wins\n Congrations!!!")
+        elif player1 == 'paper':
+            if player2 == 'rock':
+                print("Player1 wins\n Congrations!!!")
+            else:
+                print("Player2 wins\n Congrations!!!")
+    else:
+        print("Run again to play!!")
+        break
+*using function:
+user1 = input("What's your name?")
+user2 = input("And your name?")
+user1_answer = input("%s, do yo want to choose rock, paper or scissors?" % user1)
+user2_answer = input("%s, do you want to choose rock, paper or scissors?" % user2)
+
+def compare(u1, u2):
+    if u1 == u2:
+        return("It's a tie!")
+    elif u1 == 'rock':
+        if u2 == 'scissors':
+            return("Rock wins!")
+        else:
+            return("Paper wins!")
+    elif u1 == 'scissors':
+        if u2 == 'paper':
+            return("Scissors win!")
+        else:
+            return("Rock wins!")
+    elif u1 == 'paper':
+        if u2 == 'rock':
+            return("Paper wins!")
+        else:
+            return("Scissors win!")
+    else:
+        return("Invalid input! You have not entered rock, paper or scissors, try again.")
+        sys.exit()
+
+print(compare(user1_answer, user2_answer))
